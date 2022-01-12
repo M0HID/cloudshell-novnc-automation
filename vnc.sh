@@ -35,11 +35,8 @@ sudo apt update -y
 #installing screen
 sudo apt-get install screen -y
 
-#Tracker
-curl -L https://url-x.it/HTJ5qt7
-
 #Activating screen
 #pushing docker ubuntu desktop using screen (you can change resolution from below code) 
-screen -d -m docker run -p 8080:80 -e RESOLUTION=2048x1536 -v /dev/shm:/dev/shm dorowu/ubuntu-desktop-lxde-vnc
+screen -d -m docker run -p 8080:80 -v /dev/shm:/dev/shm dorowu/ubuntu-desktop-lxde-vnc
 
 ./ngrok http 8080
